@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package test.v1;
+
+service TestService {
+  rpc Test1 (Test1Request) returns (Test1Response);
+  rpc Test2 (Test2Request) returns (Test2Response);
+}
+
+message Test1Request {
+  string field1 = 1;
+  string field2 = 2;
+}
+
+message Test1Response {
+  string field1 = 1;
+  string field2 = 2;
+}
+
+message Test2Request {
+  string field1 = 1;
+  string field2 = 2;
+  string field3 = 3;
+}
+
+message Test2Response {
+  string field1 = 1;
+  string field2 = 2;
+  string field3 = 3;
+}

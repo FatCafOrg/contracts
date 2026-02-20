@@ -11,8 +11,6 @@ This project contains protocol buffer definitions and generated TypeScript contr
 - **Protocol Buffers:** Defined in the `proto/` directory.
 - **Generated Code:** Output to the `gen/` directory using `ts-proto`.
 
-## Commands
-- `npm run generate`: Re-generates TypeScript files from proto definitions.
-
 ## Project Guidelines
 - Do not manually edit files in the `gen/` directory.
+- Do not run 'npm run generate' after editing or creating files in the `proto/` directory.

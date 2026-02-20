@@ -1,0 +1,8 @@
+description = "Generate NestJS-compatible Proto files"
+prompt = """
+1. Check the existing protos in /libs/proto to match the package naming.
+2. Generate a .proto file using:
+   - syntax = "proto3";
+   - NestJS-friendly naming (PascalCase for Services and messages, camelCase for fields).
+   - google.protobuf.Empty for void returns.
+"""
