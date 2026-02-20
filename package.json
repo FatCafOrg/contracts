@@ -5,12 +5,15 @@
   "publishConfig": {
     "access": "public"
   },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "repository": {
     "url": "https://github.com/FatCafOrg/contracts",
     "type": "git"
   },
   "scripts": {
-    "generate": "protoc -I ./proto ./proto/*.proto --ts_proto_out=./gen --ts_proto_opt=nestJs=true,package=omit"
+    "generate": "protoc -I ./proto ./proto/*.proto --ts_proto_out=./gen --ts_proto_opt=nestJs=true,package=omit",
+    "build": "tsc -p tsconfig.build.json"
   },
   "files": [
     "proto",
@@ -18,9 +21,11 @@
   ],
   "dependencies": {
     "@nestjs/microservices": "^11.1.14",
+    "@types/node": "^25.3.0",
     "rxjs": "^7.8.2"
   },
   "devDependencies": {
-    "ts-proto": "^2.11.2"
+    "ts-proto": "^2.11.2",
+    "typescript": "^5.9.3"
   }
 }

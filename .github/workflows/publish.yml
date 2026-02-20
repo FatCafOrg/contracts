@@ -22,7 +22,10 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y protobuf-compiler
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --frozen-lockfile
+
+      - name: Build
+        run: npm run build
 
       - name: Generate protobufs
         run: npm run generate
