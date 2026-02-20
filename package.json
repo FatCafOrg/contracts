@@ -17,7 +17,8 @@
   },
   "files": [
     "proto",
-    "gen"
+    "gen",
+    "dist"
   ],
   "dependencies": {
     "@nestjs/microservices": "^11.1.14",
