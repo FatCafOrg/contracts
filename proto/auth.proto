@@ -5,6 +5,16 @@ package auth.v1;
 service AuthService {
   rpc SendOtp (SendOtpRequest) returns (SendOtpResponse);
   rpc verifyOtp (VerifyOtpRequest) returns (VerifyOtpResponse);
+  rpc Refresh (RefreshRequest) returns (RefreshResponse);
+}
+
+message RefreshRequest {
+  string refresh_token = 1;
+}
+
+message RefreshResponse {
+  string access_token = 1;
+  string refresh_token = 2;
 }
 
 message VerifyOtpRequest {
