@@ -3,6 +3,7 @@ prompt = """
 1. Check the existing protos in /libs/proto to match the package naming.
 2. Generate a .proto file using:
    - syntax = "proto3";
-   - NestJS-friendly naming (PascalCase for Services and messages, camelCase for fields).
+   - NestJS-friendly naming (PascalCase for Services and messages, kebab_case for fields).
    - google.protobuf.Empty for void returns.
+   - update src/proto with new path (path name uppercase of package name before .)
 """
