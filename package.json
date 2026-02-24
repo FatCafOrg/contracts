@@ -1,6 +1,6 @@
 {
   "name": "@factcaf-org/contracts",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "Contracts",
   "publishConfig": {
     "access": "public"
