@@ -1,8 +1,11 @@
 description = "Generate NestJS-compatible Proto files"
+args=["name", "service", "methods", "messages"]
 prompt = """
 1. Check the existing protos in /libs/proto to match the package naming.
-2. Generate a .proto file using:
+2. Generate a {{name}}.proto file using:
    - syntax = "proto3";
+   - inside proto file create service with {{service}} name
+   - add methods from {{methods}} and messages from {{messages}}
    - NestJS-friendly naming (PascalCase for Services and messages, kebab_case for fields).
    - google.protobuf.Empty for void returns.
    - update src/proto with new path (path name uppercase of package name before .)
